@@ -11,11 +11,13 @@ const LoginForm = ({ onLogin }) => {
     const [ password , setPassword] = useState(``);
     const [ err , setErr] = useState(``);
 
+    const r = regNum.toLowerCase();
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setErr(``);
 
-        const found = student.find(s => s.regNo === regNum);
+        const found = student.find(s => s.regNo === r);
         if (!found) {
             setErr(`You're not a registered student.`);
             return () => {
