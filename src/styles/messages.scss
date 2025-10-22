@@ -1,0 +1,39 @@
+
+.message {
+    width: 100%;
+    padding: 20px 10px;
+    background: rgb(244, 241, 241);
+
+    h3 {
+        font-size: clamp(1.2rem, 1.149rem + 0.256vw, 1.45rem);
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .contacts {
+        text-align: center;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+
+        .co-io {
+            margin: 0 20px;
+            padding: 5px 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            font-size: 2.5rem;
+            color: #222;
+            fill: #222;
+            cursor: pointer;
+            transition: .300s ease-in;
+
+            &:hover {
+                background: #d1d1d1;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+.dashboard {
+  width: 100%;
+  padding-top: 50px;
+
+  .report-center {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 20px;
+
+    .left {
+      .h2 {
+        text-align: center;
+        font-size: clamp(1.2rem, 1.149rem + 0.256vw, 1.45rem);
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+      }
+    }
+
+    .middle {
+      h3 {
+        font-size: clamp(1.2rem, 1.149rem + 0.256vw, 1.45rem);
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

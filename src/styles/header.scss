@@ -1,0 +1,61 @@
+
+header {
+  width: 100%;
+  padding: clamp(0.6rem, 1vw, 1.2rem) clamp(1rem, 2vw, 2rem);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  .header {
+    h1 {
+      font-size: clamp(0.6rem, 2vw, 1.4rem);
+      font-weight: 600;
+      color: #1e1e1e;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .user-area {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+
+    h2 {
+      font-size: clamp(0.65rem, 1.5vw, 1rem);
+      font-weight: 500;
+      color: #333;
+    }
+
+    button {
+      background: #ff4b4b;
+      border: none;
+      padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.4rem, 1.5vw, 1rem);
+      border-radius: 6px;
+      color: #fff;
+      font-size: clamp(0.65rem, 1.4vw, 0.9rem);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: 0.3s ease;
+
+      svg {
+        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      }
+
+      &:hover {
+        background: #ff4b4b;
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: scale(0.97);
+      }
+    }
+  }
+}

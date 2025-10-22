@@ -1,0 +1,82 @@
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.8rem, 1.5vw, 1.2rem);
+
+  h2 {
+    font-size: clamp(0.9rem, 0.859rem + 0.205vw, 1.1rem);
+    font-weight: 600;
+    color: #222;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: clamp(1rem, 0.938rem + 0.308vw, 1.3rem);
+    font-weight: 500;
+    color: #ff1111;
+    font-weight: 600;
+
+    text-align: center;
+  }
+
+  .green {
+    color: rgb(50, 230, 50);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.6rem, 1vw, 1rem);
+
+    label {
+      font-size: clamp(0.8rem, 1vw, 0.95rem);
+      font-weight: 500;
+      color: #444;
+    }
+
+    input,
+    select,
+    textarea {
+      resize: none;
+      padding: clamp(0.55rem, 1vw, 0.75rem);
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      font-size: clamp(0.85rem, 1vw, 1rem);
+      outline: none;
+      transition: 0.2s ease, border-color 0.2s ease;
+
+      &:focus {
+        border-color: #4a90e2;
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+      }
+    }
+
+    select {
+      background: #fff;
+      cursor: pointer;
+    }
+
+    button {
+      margin-top: clamp(0.5rem, 1vw, 1rem);
+      padding: clamp(0.6rem, 1vw, 0.8rem);
+      border: none;
+      border-radius: 6px;
+      background: #4a90e2;
+      color: #fff;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: clamp(0.85rem, 1vw, 1rem);
+      transition: 0.25s ease;
+
+      &:hover {
+        background: #3878c4;
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: scale(0.97);
+      }
+    }
+  }
+}
