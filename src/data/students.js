@@ -11,7 +11,7 @@ export const student = [
         passeword : 'kogi'
     },
     {
-        name : 'Ruth',
+        name : 'Elvina',
         regNo : 'nilest/ndcs2023/657',
         passeword : '09124606535'
     },

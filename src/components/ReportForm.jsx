@@ -7,23 +7,25 @@ import './../styles/reportForm.scss';
 const ReportForm = ({ onCreate, UserName }) => {
 
     const [type, setType] = useState(`Fire`);
+    const [customType, setCustomType] = useState(``);
     const [location, setLocation] = useState(``);
     const [description, setDescription] = useState(``);
     const [doTask, setDoTask] = useState(``);
 
-
+    const finallyType = type === `Other` ? customType : type;
 
     const handleSubmit = (e) => {
       e.preventDefault();
       
+      if (type === `Other`) {
+        if (!customType.trim()) return setDoTask('Please add a type');
+      }
       if (!location.trim()) return setDoTask('Please add your location');
       if (!description.trim()) return setDoTask('Please add your description');
-      
-      
 
       const newReports = {
         id: uuidv4(),
-        type,
+        type : finallyType,
         location,
         description,
         stauts : 'Pending',
@@ -49,6 +51,8 @@ const ReportForm = ({ onCreate, UserName }) => {
                 <option value="Bullying">Bullying</option>
                 <option value="Other">Other</option>
             </select>
+
+            {type === 'Other' ? <input type="text" name='type' placeholder='Input type' value={customType} onChange={e => setCustomType(e.target.value)}/> : ``}
 
             <label htmlFor="location">Location</label>
             <input type="text" name='location' placeholder='e.g. Cafeteria' value={location} onChange={e => setLocation(e.target.value)}/>
