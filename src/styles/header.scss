@@ -4,7 +4,7 @@
 header {
   width: 100%;
   padding: clamp(0.6rem, 1vw, 1.2rem) clamp(1rem, 2vw, 2rem);
-  background: #ffffff;
+  background: #277bda;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,7 +17,7 @@ header {
     h1 {
       font-size: clamp(0.75rem, 2vw, 1.8rem);
       font-weight: 700;
-      color: #1e1e1e;
+      color: #fff;
       font-family: "Itim", sans-serif;
     }
   }
@@ -30,7 +30,7 @@ header {
     h2 {
       font-size: clamp(0.65rem, 1.5vw, 1rem);
       font-weight: 500;
-      color: #333;
+      color: #fff;
     }
 
     button {
